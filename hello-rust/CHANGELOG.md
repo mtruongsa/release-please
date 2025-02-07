@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/mtruongsa/release-please/compare/hello_rust@v0.2.0...hello_rust@v0.3.0) (2025-02-07)
+
+
+### Features
+
+* test ([c08c766](https://github.com/mtruongsa/release-please/commit/c08c76679702a94099577ee471ba2b3bd92540b9))
+
 ## [0.2.0](https://github.com/amarjanica/release-please-monorepo-example/compare/hello_rust-v0.1.0...hello_rust@v0.2.0) (2024-05-25)
 
 
