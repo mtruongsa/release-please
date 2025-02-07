@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/mtruongsa/release-please/compare/hello-react@v0.2.0...hello-react@v0.2.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* test ([0e5a97a](https://github.com/mtruongsa/release-please/commit/0e5a97abd8d85bf00dfdc43969951dd3673cec22))
+
 ## [0.2.0](https://github.com/amarjanica/release-please-monorepo-example/compare/hello-react-v0.1.0...hello-react@v0.2.0) (2024-05-25)
 
 
