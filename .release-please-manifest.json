@@ -1,3 +1,4 @@
 {
-    "@evoke-platform/context": "1.0.0"
+  "hello-react": "0.2.1",
+  "hello-rust": "0.3.0"
 }
