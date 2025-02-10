@@ -26,7 +26,7 @@ jobs:
               continue-on-error: true
               run: |
                   echo "Release outputs:"
-                  echo "${{ toJson(steps.release.outputs) }}"
+                  echo "${{ steps.release.outputs }}"
 
     release-context:
         if: ${{needs.release-please.outputs.context--release_created}}
