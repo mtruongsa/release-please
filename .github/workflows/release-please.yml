@@ -41,8 +41,8 @@ jobs:
           cache-key: "${{hashFiles('yarn.lock')}}"
           project: context
       - run: ls
-      - run: yarn test --prefix context -- a --watchAll=false
-      - run: yarn build --prefix context
+      - run: yarn test -- a --watchAll=false
+      - run: yarn build
       - run: zip -r context-build.zip context/build
       - name: Upload Release Artifact
         env:

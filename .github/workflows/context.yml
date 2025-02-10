@@ -1,22 +1,22 @@
 name: Context CI
 
 on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "/context/**"
-      - ".github/workflows/context.yml"
+    workflow_dispatch:
+    push:
+        paths:
+            - '/context/**'
+            - '.github/workflows/context.yml'
 
 jobs:
-  test-build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup-node-env
-        with:
-          node-version: 18
-          cache-path: context/node_modules
-          cache-key: "${{hashFiles('yarn.lock')}}"
-          project: context
-      - run: ls
-      - run: yarn test --prefix context
+    test-build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: ./.github/actions/setup-node-env
+              with:
+                  node-version: 18
+                  cache-path: context/node_modules
+                  cache-key: "${{hashFiles('yarn.lock')}}"
+                  project: context
+            - run: ls
+            - run: yarn test
