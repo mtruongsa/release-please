@@ -5,11 +5,11 @@
   "separate-pull-requests": true,
   "packages": {
     "hello-react": {
-      "path": "hello-react",
+      "path": "./packages/hello-react",
       "release-type": "node"
     },
     "hello-rust": {
-      "path": "hello-rust",
+      "path": "./packages/hello-rust",
       "release-type": "rust"
     }
   },
