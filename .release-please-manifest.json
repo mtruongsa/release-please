@@ -1,3 +1,4 @@
 {
-    "context": "1.0.0"
+    "context": "1.0.0",
+    "packages/context": "1.0.0"
 }
