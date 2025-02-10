@@ -5,7 +5,7 @@
     "separate-pull-requests": true,
     "packages": {
         "@evoke-platform/context": {
-            "path": "./context",
+            "path": "./packages/context",
             "release-type": "node"
         }
     },
