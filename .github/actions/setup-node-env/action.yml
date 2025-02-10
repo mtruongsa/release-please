@@ -25,5 +25,9 @@ runs:
       with:
         path: ${{inputs.cache-path}}
         key: ${{inputs.cache-key}}
+    - run: |
+        ls
+        cd ./packages
+      shell: bash
     - run: npm ci --prefix ${{inputs.project}}
       shell: bash
