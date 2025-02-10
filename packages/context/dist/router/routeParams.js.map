@@ -1,0 +1,1 @@
+{"version":3,"file":"routeParams.js","sourceRoot":"","sources":["../../src/router/routeParams.ts"],"names":[],"mappings":"AAAA,oDAAoD;AACpD,+CAA+C;AAE/C,OAAO,EAAE,SAAS,EAAE,MAAM,kBAAkB,CAAC;AAE7C,MAAM,UAAU,aAAa;IACzB,OAAO,SAAS,EAAE,CAAC;AACvB,CAAC;AAED,MAAM,UAAU,YAAY,CAAC,KAAa;IACtC,OAAO,SAAS,EAAE,CAAC,KAAK,CAAC,CAAC;AAC9B,CAAC"}
