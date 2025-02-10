@@ -18,5 +18,5 @@ jobs:
           cache-path: context/node_modules
           cache-key: "${{hashFiles('yarn.lock')}}"
           project: context
-      - run: npm test --prefix context -- a --watchAll=false
-      - run: npm run build --prefix context
+      - run: ls
+      - run: yarn test --prefix context
