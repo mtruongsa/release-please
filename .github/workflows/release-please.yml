@@ -52,8 +52,10 @@ jobs:
           echo Using baseline:
           git log -1 --oneline baseline
       - name: Build
-        run: yarn build --filter=...[baseline]
-      - run: zip -r context-build.zip context/build
+        run: |
+          yarn build --filter=...[baseline]
+          ls -a
+          zip -r context-build.zip context/build
       - name: Upload Release Artifact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
