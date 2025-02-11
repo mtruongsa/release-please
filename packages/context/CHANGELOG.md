@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/mtruongsa/release-please/compare/v1.0.0...v1.0.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* test ([762dd0e](https://github.com/mtruongsa/release-please/commit/762dd0efcb624cd1a05441e236ae7dc6aafb32c6))
+* test ([548fb05](https://github.com/mtruongsa/release-please/commit/548fb0506212ab859f1c57b843bebebf63b5281f))
+* test ([77353b5](https://github.com/mtruongsa/release-please/commit/77353b5cbd26480464573d6a87d7b14080ee7871))
+* test ([b68569d](https://github.com/mtruongsa/release-please/commit/b68569d1a2fd679ed52e72d65910e62dbfb6ad04))
+
 ## [1.0.5](https://github.com/mtruongsa/release-please/compare/context@v1.0.4...context@v1.0.5) (2025-02-11)
 
 
