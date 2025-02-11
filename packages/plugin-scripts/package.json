@@ -1,0 +1,54 @@
+{
+    "name": "@evoke-platform/plugin-scripts",
+    "version": "1.0.0-dev.117",
+    "description": "Scripts for managing an Evoke platform plugin project",
+    "homepage": "https://github.com/Evoke-Platform/evoke-sdk/blob/main/packages/plugin-scripts/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Evoke-Platform/evoke-sdk",
+        "directory": "packages/plugin-scripts"
+    },
+    "bugs": {
+        "url": "https://github.com/Evoke-Platform/evoke-sdk/issues"
+    },
+    "bin": {
+        "pkgplugin": "./bin/package-plugin.js",
+        "manifestgen": "./bin/generate-manifest.js"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "bin",
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "pretest": "npm run build",
+        "test": "mocha \"dist/__tests__/**/*.unit.js\"",
+        "release": "commit-and-tag-version -t plugin-scripts@ --releaseCommitMessageFormat \"chore(release): plugin-scripts@{{currentTag}} [skip ci]\"",
+        "predeploy": "cp ../../LICENSE .",
+        "deploy": "npm publish --access=public"
+    },
+    "author": "System Automation Corp.",
+    "license": "MIT",
+    "dependencies": {
+        "@microsoft/tsdoc": "^0.14.2",
+        "comment-parser": "^1.4.1",
+        "glob": "^10.4.1",
+        "jszip": "^3.10.0",
+        "lodash": "^4.17.21",
+        "mkdirp": "^3.0.1",
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.11",
+        "@types/chai-as-promised": "^7.1.8",
+        "@types/dirty-chai": "^2.0.4",
+        "@types/lodash": "^4.17.1",
+        "chai": "^4.4.1",
+        "chai-as-promised": "^7.1.1",
+        "commit-and-tag-version": "^12.1.0",
+        "dirty-chai": "^2.0.1",
+        "mocha": "^10.2.0"
+    }
+}

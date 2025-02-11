@@ -1,0 +1,16 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Evoke-Platform/evoke-sdk/main/widgetschema.json",
+    "id": "Widget",
+    "name": "Sample widget",
+    "description": "Description of the Sample Widget",
+    "version": "1.0.0",
+    "src": "src/widgets/SampleWidget",
+    "properties": [
+        {
+            "name": "message",
+            "type": "text",
+            "isOptional": true,
+            "displayName": "Message"
+        }
+    ]
+}
