@@ -1,5 +1,5 @@
 {
-    "name": "@evoke-platform/context",
+    "name": "@evoke-platform/test-context",
     "version": "1.0.5",
     "description": "Utilities that provide context to Evoke platform widgets",
     "main": "dist/index.js",
