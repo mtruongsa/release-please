@@ -26,4 +26,4 @@ jobs:
         continue-on-error: true
         run: |
           echo "Release outputs:"
-          echo "${{ toJSON(steps.release.outputs) }}"
+          echo '${{ toJSON(steps.release.outputs) }}'
