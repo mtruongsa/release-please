@@ -16,7 +16,7 @@ jobs:
       context--tag_name: ${{ steps.release.outputs.context--tag_name}}
       context--release_created: ${{ steps.release.outputs.context--release_created}}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v3
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
