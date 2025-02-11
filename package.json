@@ -1,6 +1,6 @@
 {
     "name": "@evoke-platform/monorepo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Monorepo for the Evoke platform SDK",
     "private": true,
     "workspaces": [
