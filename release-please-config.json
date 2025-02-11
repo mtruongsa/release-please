@@ -2,6 +2,7 @@
     "include-component-in-tag": true,
     "include-v-in-tag": true,
     "tag-separator": "@",
+    "prerelease": true,
     "separate-pull-requests": true,
     "packages": {
         "packages/context": {

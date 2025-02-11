@@ -5,12 +5,11 @@
         "outDir": "dist",
         "rootDir": "src",
         "target": "es6",
-        "lib": [
-            "DOM"
-        ],
+        "lib": ["DOM"],
         "module": "ESNext",
         "jsx": "react-jsx",
         "sourceMap": false
     }
 }
+// patch
 // patch
