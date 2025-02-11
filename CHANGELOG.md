@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/mtruongsa/release-please/compare/v1.0.0...v1.0.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* test ([b68569d](https://github.com/mtruongsa/release-please/commit/b68569d1a2fd679ed52e72d65910e62dbfb6ad04))
+
 ## 1.0.0 (2025-02-11)
 
 
