@@ -17,6 +17,7 @@
     },
     "homepage": "https://github.com/Evoke-Platform/evoke-sdk/blob/main/README.md",
     "devDependencies": {
+        "@changesets/cli": "^2.27.12",
         "@commitlint/cli": "^17.7.1",
         "@commitlint/config-conventional": "^18.4.3",
         "@typescript-eslint/eslint-plugin": "^7.0.0",
