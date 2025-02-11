@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/mtruongsa/release-please/compare/context@v1.0.5...context@v1.0.6) (2025-02-11)
+
+
+### Bug Fixes
+
+* test ([4020220](https://github.com/mtruongsa/release-please/commit/4020220bac5d4db70125168eab51a57e997f31e1))
+
 ## [1.0.5](https://github.com/mtruongsa/release-please/compare/context@v1.0.4...context@v1.0.5) (2025-02-11)
 
 
