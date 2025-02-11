@@ -20,10 +20,10 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
           release-type: node
           prerelease: true
+          versioning-strategy: prerelease
+          path: packages/context
           package-name: packages/context
       - name: Print release outputs for debugging
         continue-on-error: true
