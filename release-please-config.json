@@ -2,8 +2,7 @@
   "include-component-in-tag": true,
   "include-v-in-tag": true,
   "tag-separator": "@",
-  "prerelease": false,
-  "separate-pull-requests": false,
+  "separate-pull-requests": true,
   "packages": {
     "packages/context": {
       "release-type": "node"
