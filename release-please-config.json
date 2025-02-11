@@ -1,13 +1,13 @@
 {
-    "include-component-in-tag": true,
-    "include-v-in-tag": true,
-    "tag-separator": "@",
-    "prerelease": true,
-    "separate-pull-requests": true,
-    "packages": {
-        "packages/context": {
-            "release-type": "node"
-        }
-    },
-    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+  "include-component-in-tag": true,
+  "include-v-in-tag": true,
+  "tag-separator": "@",
+  "prerelease": false,
+  "separate-pull-requests": false,
+  "packages": {
+    "packages/context": {
+      "release-type": "node"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
