@@ -24,6 +24,7 @@ jobs:
           manifest-file: .release-please-manifest.json
           release-type: node
           prerelease: true
+          versioning-strategy: prerelease
           package-name: packages/context
       - name: Print release outputs for debugging
         continue-on-error: true
