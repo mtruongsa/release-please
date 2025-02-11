@@ -24,7 +24,7 @@ jobs:
           prerelease: true
           versioning-strategy: prerelease
           path: packages/context
-          package-name: packages/context
+          package-name: "@evoke-platform/context"
       - name: Print release outputs for debugging
         continue-on-error: true
         run: |
