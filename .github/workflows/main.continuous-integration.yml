@@ -21,8 +21,8 @@ jobs:
             #       app_id: ${{ vars.TOKEN_APP_ID }}
             #       private_key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
             - uses: actions/checkout@v3
-            #   with:
-            #       fetch-depth: 5
+              with:
+                  fetch-depth: 0
             #       token: ${{ steps.generate_token.outputs.token }}
             - uses: actions/setup-node@v3
               with:
@@ -30,6 +30,8 @@ jobs:
             - name: Setup
               run: |
                   yarn install
+                  echo Current branch:
+                  git branch --show-current
                   git tag baseline HEAD
                   echo Using baseline:
                   git log -1 --oneline baseline
