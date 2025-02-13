@@ -8,5 +8,3 @@ export * from './notification/index.js';
 export * from './objects/index.js';
 export * from './router/index.js';
 export * from './signalr/index.js';
-
-// patch
