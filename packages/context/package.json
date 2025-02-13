@@ -1,0 +1,74 @@
+{
+    "name": "@evoke-platform/context",
+    "version": "1.0.0-dev.0",
+    "description": "Utilities that provide context to Evoke platform widgets",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "pretest": "npm run build",
+        "test": "mocha --recursive dist/tests",
+        "release": "commit-and-tag-version -t context@ --releaseCommitMessageFormat \"chore(release): context@{{currentTag}} [skip ci]\"",
+        "predeploy": "cp ../../LICENSE .",
+        "deploy": "npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Evoke-Platform/evoke-sdk",
+        "directory": "packages/context"
+    },
+    "keywords": [
+        "evoke"
+    ],
+    "author": "System Automation Corp.",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Evoke-Platform/evoke-sdk/issues"
+    },
+    "homepage": "https://github.com/Evoke-Platform/evoke-sdk/blob/main/packages/context/README.md",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "!dist/tests"
+    ],
+    "devDependencies": {
+        "@azure/msal-browser": "^2.38.4",
+        "@azure/msal-react": "^1.5.9",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/react": "^16.0.1",
+        "@types/chai": "^4.3.11",
+        "@types/dirty-chai": "^2.0.4",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^18.15.7",
+        "@types/react": "^18.2.28",
+        "@types/sinon": "^17.0.3",
+        "@types/uuid": "^9.0.8",
+        "chai": "^4.4.1",
+        "commit-and-tag-version": "^12.1.0",
+        "dirty-chai": "^2.0.1",
+        "eslint-plugin-react": "^7.33.2",
+        "global-jsdom": "^25.0.0",
+        "jsdom": "^25.0.1",
+        "mocha": "^10.2.0",
+        "msw": "^1.3.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.16.0",
+        "sinon": "^18.0.0",
+        "typescript": "^5.3.3"
+    },
+    "peerDependencies": {
+        "@azure/msal-browser": ">=2",
+        "@azure/msal-react": ">=1",
+        "react": ">=18",
+        "react-router-dom": ">=6"
+    },
+    "dependencies": {
+        "@microsoft/signalr": "^7.0.12",
+        "axios": "^1.7.9",
+        "uuid": "^9.0.1"
+    }
+}

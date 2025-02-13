@@ -1,0 +1,56 @@
+{
+    "name": "@evoke-platform/monorepo",
+    "version": "1.0.0",
+    "description": "Monorepo for the Evoke platform SDK",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Evoke-Platform/evoke-sdk"
+    },
+    "author": "System Automation Corp.",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Evoke-Platform/evoke-sdk/issues"
+    },
+    "homepage": "https://github.com/Evoke-Platform/evoke-sdk/blob/main/README.md",
+    "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^18.4.3",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^6.16.0",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.2",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5",
+        "release-please": "^16.15.0",
+        "turbo": "^1.12.4",
+        "typescript": "^5.3.3"
+    },
+    "packageManager": "yarn@1.22.19",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "lint": "yarn eslint && yarn prettier",
+        "lint:fix": "yarn eslint:fix && yarn prettier:fix",
+        "eslint": "eslint .",
+        "eslint:fix": "eslint --fix .",
+        "prettier": "prettier -c .",
+        "prettier:fix": "prettier --write .",
+        "build": "turbo run build",
+        "test": "turbo run test",
+        "release": "turbo run release --concurrency 1 -- ",
+        "deploy": "turbo run deploy -- "
+    },
+    "lint-staged": {
+        "*.{ts,js,json,md}": [
+            "yarn lint:fix"
+        ]
+    }
+}
