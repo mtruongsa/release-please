@@ -1,0 +1,74 @@
+name: Live Continuous Integration
+
+on:
+    push:
+        branches:
+            - live
+    workflow_dispatch:
+
+concurrency:
+    group: branch-live
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        if: ${{ contains(github.ref, 'release-please--branches--live--components') == false }}
+        steps:
+            # - name: Generate Token
+            #   id: generate_token
+            #   uses: tibdex/github-app-token@v1
+            #   with:
+            #       app_id: ${{ vars.TOKEN_APP_ID }}
+            #       private_key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 5
+            #       token: ${{ steps.generate_token.outputs.token }}
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: Setup
+              run: |
+                  yarn install
+                  echo Current branch:
+                  git branch --show-current
+                  git tag baseline HEAD^
+                  echo Using baseline:
+                  git log -1 --oneline baseline
+            - name: Build
+              run: yarn build --filter=...[baseline]
+            - name: Publish
+              run: |
+                  git config user.name "GitHub Actions Bot"
+                  git config user.email "<>"
+                  mv npmrc-ci .npmrc
+                  npx turbo run release --concurrency 1 --filter=...[baseline] -- --prerelease testing --skip.tag --skip.changelog
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Push Changes
+              run: |
+                  git fetch origin
+                  git merge -m "Merge branch 'live' [skip ci]" origin/live
+                  git push origin HEAD:live
+
+    release-please:
+        runs-on: ubuntu-latest
+        needs: publish
+        outputs:
+            context--tag_name: ${{ steps.release.outputs.context--tag_name}}
+            context--release_created: ${{ steps.release.outputs.context--release_created}}
+            payment--tag_name: ${{ steps.release.outputs.payment--tag_name}}
+            payment--release_created: ${{ steps.release.outputs.payment--release_created}}
+        steps:
+            - uses: googleapis/release-please-action@v4
+              id: release
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  config-file: release-please-config.json
+                  manifest-file: .release-please-manifest.json
+                  target-branch: live
+            - name: Print release outputs for debugging
+              continue-on-error: true
+              run: |
+                  echo "Release outputs:"
+                  echo '${{ toJSON(steps.release.outputs) }}'
