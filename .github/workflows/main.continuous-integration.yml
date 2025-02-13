@@ -30,6 +30,8 @@ jobs:
             - name: Setup
               run: |
                   yarn install
+                  echo Current branch:
+                  git branch --show-current
                   git tag baseline HEAD
                   echo Using baseline:
                   git log -1 --oneline baseline
