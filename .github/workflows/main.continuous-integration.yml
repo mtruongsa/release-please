@@ -12,7 +12,7 @@ concurrency:
 jobs:
     publish:
         runs-on: ubuntu-latest
-        if: ${{ contains(github.ref, 'refs/heads/live') == false }}
+        if: ${{ contains('refs/heads/live', github.ref) == false }}
         steps:
             # - name: Generate Token
             #   id: generate_token
@@ -32,7 +32,7 @@ jobs:
                   yarn install
                   echo Current branch:
                   git branch --show-current
-                  git tag baseline HEAD
+                  git tag baseline HEAD^
                   echo Using baseline:
                   git log -1 --oneline baseline
             - name: Build
