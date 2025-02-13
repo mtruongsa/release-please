@@ -30,7 +30,7 @@ jobs:
             - name: Setup
               run: |
                   yarn install
-                  git tag baseline HEAD
+                  git tag baseline HEAD^
                   echo Using baseline:
                   git log -1 --oneline baseline
             - name: Build
