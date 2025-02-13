@@ -10,3 +10,4 @@ export * from './router/index.js';
 export * from './signalr/index.js';
 
 // patch
+// minor
