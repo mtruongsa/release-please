@@ -22,7 +22,7 @@ jobs:
             #       private_key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
             - uses: actions/checkout@v3
               with:
-                  fetch-depth: 0
+                  fetch-depth: 5
             #       token: ${{ steps.generate_token.outputs.token }}
             - uses: actions/setup-node@v3
               with:
